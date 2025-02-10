@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5429164210463053173}
   - component: {fileID: 8386153966490021033}
   - component: {fileID: 4145394065583975628}
-  m_Layer: 0
+  - component: {fileID: 7959608533431474987}
+  m_Layer: 3
   m_Name: SphereBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,8 +105,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.50383765
+  m_Center: {x: 0, y: 0.0038375636, z: 0}
 --- !u!54 &4145394065583975628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -114,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6019501061589744581}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -133,3 +134,17 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &7959608533431474987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6019501061589744581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d38401b7944f6abe489afdd66dcfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4145394065583975628}
+  renderer: {fileID: 5429164210463053173}
