@@ -1,7 +1,11 @@
-namespace CodeBase.Sphere
+using UnityEngine;
+
+namespace CodeBase.Zone
 {
     public interface IDestroyColorZone
     {
         public void DestroyAllBallsInZone();
+        public Transform GetNonRotationalParent();
+        public Color color { get; }
     }
 }

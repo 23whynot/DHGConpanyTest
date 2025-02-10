@@ -1,5 +1,5 @@
 using CodeBase.Balls.Player;
-using CodeBase.Sphere;
+using CodeBase.Zone;
 using UnityEngine;
 
 namespace CodeBase.Balls.Sphere
@@ -10,14 +10,14 @@ namespace CodeBase.Balls.Sphere
         [SerializeField] private Renderer renderer;
         private IDestroyColorZone _zone;
         private Color _color;
-        
 
-        public void SetZoneAndColor(IDestroyColorZone zone, Color color)
+        private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
+
+        public void Init(IDestroyColorZone zone, Material material)
         {
             _zone = zone;
-            _color = color;
-            
-            renderer.material.color = _color;
+
+            renderer.material = material;
         }
 
         private void OnCollisionEnter(Collision other)
@@ -25,16 +25,26 @@ namespace CodeBase.Balls.Sphere
             
             if (other.gameObject.TryGetComponent<IPlayerBall>(out IPlayerBall playerBall))
             {
-                if (playerBall.GetColor().linear == _color.linear) _zone.DestroyAllBallsInZone();
+                if (playerBall.GetColor() == _zone.color)
+                {
+                    _zone.DestroyAllBallsInZone();
+                }
                 
-              //  playerBall.Destroy();
             }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+            
+            
         }
 
-        public void ZoneDestroed()
+        private void ChangeParentTransform(Transform parent) => transform.SetParent(parent);
+
+        public void ZoneDestroy()
         {
             rb.isKinematic = false;
-            rb.AddForce(Vector3.down, ForceMode.Impulse);
+            ChangeParentTransform(_zone.GetNonRotationalParent());
         }
     }
 }

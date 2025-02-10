@@ -7,20 +7,22 @@ namespace CodeBase.Sphere
 {
     public class SphereGenerator : MonoBehaviour, IColorOfZoneProvider
     {
-        [SerializeField] private GameObject ballPrefab; // Префаб шарика
+        [SerializeField] private SphereBall ballPrefab; 
+        [SerializeField] private Transform nonRotationalParent;
+        [SerializeField] private Material material;
 
-        [Header("Настройки генерации")] [Tooltip("Количество слоёв сфер (минимум 1, максимум 3)")] [Range(1, 3)]
-        public int layerCount = 3; // Количество слоёв сфер
+        [Header("Настройки генерации")]
+        [Range(1, 3)] public int layerCount = 3; // Количество слоёв сфер
 
         [Tooltip("Цвета зон. Каждый цвет соответствует одной зоне на сферах")]
-        public List<Color> zoneColors = new List<Color>(); // Список цветов зон
+        public List<Color> zoneColors = new List<Color>();
 
-        private int baseBallCount = 350; // Базовое количество шариков для внешнего слоя
-        private float outerSphereRadius = 6f; // Радиус внешней сферы
-        private float innerSphereRadius = 3f; // Радиус внутренней сферы
-        private float noiseScale = 3f; // Масштаб шума для неровностей границ зон
-        private float borderWidth = 0.4f; // Ширина размытых границ между зонами
-        private IColorOfZoneProvider _colorOfZoneProviderImplementation;
+        private readonly int _baseBallCount = 350; 
+        private readonly float _outerSphereRadius = 6f; 
+        private readonly float _innerSphereRadius = 3f; 
+        private readonly float _noiseScale = 3f; 
+        private readonly float _borderWidth = 0.4f;
+        
 
         private void Start() => GenerateLayers();
 
@@ -29,16 +31,16 @@ namespace CodeBase.Sphere
         private void GenerateLayers()
         {
             // Рассчитываем шаг радиуса между слоями
-            float radiusStep = (outerSphereRadius - innerSphereRadius) / Mathf.Max(1, layerCount - 1);
+            float radiusStep = (_outerSphereRadius - _innerSphereRadius) / Mathf.Max(1, layerCount - 1);
 
             for (int layerIndex = 0; layerIndex < layerCount; layerIndex++)
             {
                 // Радиус текущего слоя
-                float currentRadius = outerSphereRadius - (radiusStep * layerIndex);
+                float currentRadius = _outerSphereRadius - (radiusStep * layerIndex);
 
                 // Рассчитываем количество шариков для текущего слоя
                 int ballCountForLayer =
-                    Mathf.CeilToInt(baseBallCount * Mathf.Pow(currentRadius / outerSphereRadius, 2));
+                    Mathf.CeilToInt(_baseBallCount * Mathf.Pow(currentRadius / _outerSphereRadius, 2));
 
                 // Генерируем зоны для текущего слоя
                 List<ColorZone> currentLayerZones = new List<ColorZone>();
@@ -58,7 +60,7 @@ namespace CodeBase.Sphere
             {
                 // Случайная позиция на поверхности сферы
                 Vector3 randomPos = Random.onUnitSphere * 2.0f;
-                zones.Add(new ColorZone(randomPos, zoneColors[i]));
+                zones.Add(new ColorZone(randomPos, zoneColors[i], nonRotationalParent, new Material(material)));
             }
         }
 
@@ -78,16 +80,13 @@ namespace CodeBase.Sphere
                 );
 
                 // Создаём шарик в сцене
-                GameObject ball = Instantiate(ballPrefab, position, Quaternion.identity, transform);
+                SphereBall ball = Instantiate(ballPrefab, position, Quaternion.identity, transform);
 
                 // Определяем зону на основе позиции шарика и шума
                 ColorZone zone = GetZoneByPosition(position, zones);
 
-                // Устанавливаем ссылку на зону в компонент SphereBall
-                SphereBall sphereBall = ball.GetComponent<SphereBall>();
-                sphereBall.SetZoneAndColor(zone, zone.color); // Связываем шарик с зоной
-
-                // Регистрируем шарик в соответствующей зоне
+                ball.Init(zone, zone.GetMaterial()); // Связываем шарик с зоной
+                
                 zone.RegisterBall(ball);
             }
         }
@@ -100,8 +99,8 @@ namespace CodeBase.Sphere
             foreach (ColorZone zone in zones)
             {
                 // Генерация шума для плавных границ зон
-                float noise = Mathf.PerlinNoise(pos.x * noiseScale, pos.y * noiseScale) * 2 - 1;
-                float distance = Vector3.Distance(pos, zone.center) + noise * borderWidth;
+                float noise = Mathf.PerlinNoise(pos.x * _noiseScale, pos.y * _noiseScale) * 2 - 1;
+                float distance = Vector3.Distance(pos, zone.center) + noise * _borderWidth;
 
                 if (distance < bestMatch)
                 {
