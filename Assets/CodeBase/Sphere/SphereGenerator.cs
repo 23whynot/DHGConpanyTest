@@ -15,9 +15,9 @@ namespace CodeBase.Sphere
         public List<Color> zoneColors = new List<Color>();
 
         private List<List<Zone>> sphereLayers = new List<List<Zone>>();
-        private int baseBallCount = 500; // Базовое количество шариков для внешнего слоя
-        private float outerSphereRadius = 7f; // Радиус внешней сферы
-        private float innerSphereRadius = 5f; // Радиус внутренней сферы
+        private int baseBallCount = 350; // Базовое количество шариков для внешнего слоя
+        private float outerSphereRadius = 6f; // Радиус внешней сферы
+        private float innerSphereRadius = 3f; // Радиус внутренней сферы
         private float noiseScale = 3f; // Масштаб шума для неровных границ зон
         private float borderWidth = 0.4f; // Ширина размытых границ между зонами
 
