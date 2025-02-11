@@ -1,3 +1,4 @@
+using CodeBase.Factory;
 using UnityEngine;
 
 namespace CodeBase.AssetsManagment
@@ -6,17 +7,21 @@ namespace CodeBase.AssetsManagment
     {
         private GameObject _ballPrefab;
 
-        public void DownloadAllPrefabs()
-        {
-            _ballPrefab = Resources.Load<GameObject>("Prefabs/PlayerBall");
-        }
+        private const string Ball = "Ball";
+
+        public void Init() => DownloadAllPrefabs();
 
         public GameObject GetPrefab(string assetName)
         {
-            if (assetName == "Ball")
+            if (assetName == Ball)
                 return _ballPrefab;
             
             return null;
+        }
+
+        private void DownloadAllPrefabs()
+        {
+            _ballPrefab = Resources.Load<GameObject>(AssetPath.PlayerBall);
         }
     }
 }

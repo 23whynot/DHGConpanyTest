@@ -5,24 +5,222 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d951f1a3-b954-403d-8809-b2534704a1c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/CollisionHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/CollisionHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/MaterialController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/MaterialController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/AssetPath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/AssetPath.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/GameFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/GameFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/IGameFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/IGameFactory.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/IAssetsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/IAssetsProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/PLayerBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/PLayerBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/IDestroyableNotifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/IDestroyableNotifier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/SphereBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/SphereBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Visual.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Visual/ScrollingBackground.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Visual/ScrollingBackground.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/ColorZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/ColorZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/IDestroyColorZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/IDestroyColorZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Collision Behavior/Toon Projectiles - Impact 9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 10.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 10.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 11.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 11.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 12.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 12.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 13.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 13.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 14.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 14.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 15.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 15.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 6.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 6.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 7.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 7.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 8.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 8.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Data Objects/Spawn Behavior Modification/Toon Projectiles - Muzzle 9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials/Wall Mod 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials/Wall Mod 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials/Wall Mod 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials/Wall Mod 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials/Waves22cg Mod 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Materials/Waves22cg Mod 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 11.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 11.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 12.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 12.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 13.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 13.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 14.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 14.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 15.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 15.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 6.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 6.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 7.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 7.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 8.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 8.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 9.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Impacts/Toon Projectiles - Impact 9.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 11.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 11.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 12.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 12.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 13.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 13.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 14.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 14.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 15.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 15.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 5.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 5.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 6.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 6.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 7.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 7.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 8.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 8.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 9.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Particles/Muzzles/Toon Projectiles - Muzzle 9.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Prefabs/Demo Actor (PLAYER) - Toon Projectiles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Prefabs/Demo Actor (PLAYER) - Toon Projectiles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 1 magic.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 1 magic.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 10 green.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 10 green.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 11 bullets.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 11 bullets.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 12 blue.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 12 blue.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 13 star.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 13 star.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 14 huricara.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 14 huricara.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 15 arrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 15 arrow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 2 acid.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 2 acid.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 3 torpedo.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 3 torpedo.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 4 water.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 4 water.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 5 star.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 5 star.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 6 black hole.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 6 black hole.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 7 fire.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 7 fire.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 8 triangle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 8 triangle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 9 thunder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Projectiles/Toon Projectiles - Projectile 9 thunder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Scene/Projectile Factory Demo - Toon Projectiles.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/HOVL - Toon Projectiles/Scene/Projectile Factory Demo - Toon Projectiles.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/INTEGRATIONS READ ME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InfinityPBR - Magic Pig Games/Projectile Factory/Asset Store Integrations/INTEGRATIONS READ ME.txt.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerBall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/SphereBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/SphereBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BackGround.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BackGround.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Background.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,7 +231,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/bf/86ccae3d/RuntimeMethodInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Sphere/IColorOfZoneProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereRotator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Visual/ScrollingBackground.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Visual/BackGroundController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -50,7 +248,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.35358256",
+    "XThreadsFramesViewSplitterKey": "0.24942264",
     "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -87,10 +285,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29060">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25540">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29060" />
+      <option name="pid" value="25540" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -109,7 +307,10 @@
       <workItem from="1739183805476" duration="2314000" />
       <workItem from="1739186313530" duration="2716000" />
       <workItem from="1739193304698" duration="5863000" />
-      <workItem from="1739202968021" duration="13123000" />
+      <workItem from="1739202968021" duration="16230000" />
+      <workItem from="1739223880889" duration="6791000" />
+      <workItem from="1739233128829" duration="2969000" />
+      <workItem from="1739261266463" duration="12041000" />
     </task>
     <servers />
   </component>
@@ -126,5 +327,24 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs</url>
+          <line>22</line>
+          <properties documentPath="F:\Git\DHGConpanyTest\Assets\CodeBase\AssetsManagment\AssetsProvider.cs" containingFunctionPresentation="Method 'DownloadAllPrefabs'">
+            <startOffsets>
+              <option value="510" />
+            </startOffsets>
+            <endOffsets>
+              <option value="511" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

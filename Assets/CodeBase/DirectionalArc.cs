@@ -1,5 +1,4 @@
-using CodeBase.Balls.Player;
-using CodeBase.Core.ObjPool;
+using CodeBase.Factory;
 using UnityEngine;
 using Zenject;
 
@@ -7,79 +6,103 @@ namespace CodeBase
 {
     public class DirectionalArc : MonoBehaviour
     {
-        public GameObject ballPrefab;
-        public Transform spawnPoint;
-        public float initialSpeed = 20f;
-        public ProjectileTrajectory projectileTrajectory; // Ссылка на компонент расчета траектории
+        [Header("Ball Configuration")]
+        [SerializeField] private GameObject ballPrefab;
+        [SerializeField] private Transform spawnPoint;
+        [SerializeField] private float initialSpeed = 50f;
 
-        public float horizontalAdjustmentSpeed = 120f;
-        public float verticalAdjustmentSpeed = 300f;
+        [Header("Trajectory Settings")]
+        [SerializeField] private ProjectileTrajectory projectileTrajectory; 
+        [SerializeField] private float horizontalAdjustmentSpeed = 60;
+        [SerializeField] private float verticalAdjustmentSpeed = 30f;
 
         private float horizontalAngleOffset = 0f;
         private float verticalAngleOffset = 0f;
-        
-        private int _preLoadCount = 5;
-        private ObjectPool _pool;
+        private GameObject currentBall;
+        private IGameFactory _gameFactory;
 
         [Inject]
-        public void Construct(ObjectPool pool)
+        public void Construct(IGameFactory gameFactory)
         {
-            _pool = pool;
+            _gameFactory = gameFactory;
         }
+
+        private void Awake() => InitGameFactory();
+
         private void Start()
+        {
+            SpawnBall();
+            InitializeTrajectory();
+        }
+
+        private void Update() => HandleInput();
+
+        private void InitializeTrajectory()
         {
             projectileTrajectory.SetupTrajectory(spawnPoint, initialSpeed);
             projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
-            
-            _pool.RegisterPrefab<PlayerBall>(ballPrefab ,_preLoadCount);
         }
 
-        private void Update()
+
+        private void HandleInput()
         {
-            // Управление поворотом влево и вправо
-            if (Input.GetKey(KeyCode.A))
-            {
-                horizontalAngleOffset -= horizontalAdjustmentSpeed * Time.deltaTime;
-                projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
-            }
+            HandleHorizontalInput();
+            HandleVerticalInput();
 
-            if (Input.GetKey(KeyCode.D))
-            {
-                horizontalAngleOffset += horizontalAdjustmentSpeed * Time.deltaTime;
-                projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
-            }
-
-            // Управление вертикальным углом вверх/вниз
-            if (Input.GetKey(KeyCode.W))
-            {
-                verticalAngleOffset = Mathf.Clamp(verticalAngleOffset - verticalAdjustmentSpeed * Time.deltaTime, -180f,
-                    180f);
-                projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                verticalAngleOffset = Mathf.Clamp(verticalAngleOffset + verticalAdjustmentSpeed * Time.deltaTime, -180f,
-                    180f);
-                projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
-            }
-
-            // Запуск шарика
             if (Input.GetMouseButtonDown(0))
             {
                 LaunchBall();
             }
         }
 
+        private void HandleHorizontalInput()
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                AdjustHorizontalAngle(-horizontalAdjustmentSpeed);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                AdjustHorizontalAngle(horizontalAdjustmentSpeed);
+            }
+        }
+
+        private void HandleVerticalInput()
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                AdjustVerticalAngle(-verticalAdjustmentSpeed);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                AdjustVerticalAngle(verticalAdjustmentSpeed);
+            }
+        }
+
+        private void AdjustHorizontalAngle(float adjustment)
+        {
+            horizontalAngleOffset += adjustment * Time.deltaTime;
+            projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
+        }
+
+        private void AdjustVerticalAngle(float adjustment)
+        {
+            verticalAngleOffset = Mathf.Clamp(verticalAngleOffset + adjustment * Time.deltaTime, -180f, 180f);
+            projectileTrajectory.DrawTrajectory(horizontalAngleOffset, verticalAngleOffset);
+        }
+
         private void LaunchBall()
         {
-
-            PlayerBall ball = _pool.GetObject<PlayerBall>();
-            ball.transform.position = spawnPoint.position;
-            Rigidbody rb = ball.GetComponent<Rigidbody>();
-            Vector3 velocity = projectileTrajectory.CalculateLaunchVelocity(horizontalAngleOffset, verticalAngleOffset);
-            rb.velocity = velocity;
-            ball.Activate();
+            Rigidbody rb = currentBall.GetComponent<Rigidbody>();
+            
+            rb.isKinematic = false;
+            rb.velocity = projectileTrajectory.CalculateLaunchVelocity(horizontalAngleOffset, verticalAngleOffset);
+            
+            SpawnBall();
         }
+
+        private void SpawnBall() => currentBall = _gameFactory.CreatePlayerBall(at: spawnPoint);
+
+        private void InitGameFactory() => _gameFactory.Init();
     }
 }

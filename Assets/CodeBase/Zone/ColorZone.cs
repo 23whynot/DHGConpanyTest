@@ -15,6 +15,7 @@ namespace CodeBase.Zone
         private IDestroyColorZone _destroyColorZoneImplementation;
         private readonly Transform _nonRotationalParent;
         private readonly Material _material;
+        
         private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
 
 
@@ -39,7 +40,7 @@ namespace CodeBase.Zone
                 ball.ZoneDestroy();
                 
             }
-            _ballsInZone.Clear();
+          //  _ballsInZone.Clear();
         }
 
         public Transform GetNonRotationalParent()
