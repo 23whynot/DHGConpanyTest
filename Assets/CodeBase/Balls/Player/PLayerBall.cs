@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 namespace CodeBase.Balls.Player
 {
-    public class PlayerBall : MonoBehaviour, IPlayerBall, IPoolableObject, IPlayerBallColorHandler
+    public class PlayerBall : MonoBehaviour, IPlayerBall, IPoolableObject
     {
         [SerializeField] private Renderer meshRenderer;
         [SerializeField] private Rigidbody rigidBody;
@@ -59,14 +59,8 @@ namespace CodeBase.Balls.Player
 
         public Color GetColor() => _ballColor;
 
-        public void Destroy()
-        {
-            Deactivate();
-        }
-    }
-
-    public interface IPlayerBallColorHandler
-    {
+        public void Destroy() => Deactivate();
         
     }
+    
 }

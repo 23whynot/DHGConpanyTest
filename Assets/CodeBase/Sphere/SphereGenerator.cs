@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace CodeBase.Sphere
 {
-    public class SphereGenerator : MonoBehaviour, IColorOfZoneProvider
+    public class SphereGenerator : MonoBehaviour, IColorOfZoneProvider, ICoroutineRunner
     {
         [SerializeField] private SphereBall ballPrefab;
         [SerializeField] private Transform nonRotationalParent;
@@ -14,7 +14,7 @@ namespace CodeBase.Sphere
         
         [Range(1, 3)] public int layerCount = 3;
         public List<Color> zoneColors = new List<Color>();
-
+        
         private const int BaseBallCount = 350;
         private const float OuterSphereRadius = 6f;
         private const float InnerSphereRadius = 3f;
@@ -37,7 +37,7 @@ namespace CodeBase.Sphere
             }
         }
 
-        private List<ColorZone> CreateZones() => zoneColors.Select(color => new ColorZone(Random.onUnitSphere * 2f, color, nonRotationalParent, new Material(material))).ToList();
+        private List<ColorZone> CreateZones() => zoneColors.Select(color => new ColorZone(Random.onUnitSphere * 2f, color, nonRotationalParent, new Material(material), this)).ToList();
 
         private void GenerateSphere(float radius, int ballCount, List<ColorZone> zones)
         {

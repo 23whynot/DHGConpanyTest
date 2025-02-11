@@ -1,7 +1,9 @@
 using CodeBase.AssetsManagment;
 using CodeBase.Core.ObjPool;
 using CodeBase.Factory;
+using CodeBase.Services;
 using CodeBase.Sphere;
+using UnityEngine;
 using Zenject;
 
 namespace CodeBase.Core.Zenject
@@ -14,7 +16,15 @@ namespace CodeBase.Core.Zenject
             Container.Bind<ObjectPool>().AsSingle();
             Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
             Container.Bind<IColorOfZoneProvider>().FromComponentInHierarchy().AsSingle();
-            
+            Container.Bind<IInputService>().FromMethod(GetInputService).AsSingle();
+        }
+
+        private IInputService GetInputService(InjectContext context)
+        {
+            if (Application.isEditor)
+                return new EditorInputService();
+            else
+                return new MobileInputService();
         }
     }
 }
