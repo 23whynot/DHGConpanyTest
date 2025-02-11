@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using CodeBase.Balls.Sphere;
-using CodeBase.Sphere;
+using CodeBase.Services.RendererMaterialService;
 using UnityEngine;
 using Zenject;
 
@@ -9,34 +9,41 @@ namespace CodeBase.Zone
 {
     public class ColorZone : IDestroyColorZone
     {
-        public Vector3 center;
+        public Vector3 Center;
 
-        public Color color { get; private set; }
+        public Color Color { get; private set; }
 
         private List<IDestroyableNotifier> _ballsInZone = new List<IDestroyableNotifier>();
         private IDestroyColorZone _destroyColorZoneImplementation;
         private readonly Transform _nonRotationalParent;
-        private readonly Material _material;
         private ICoroutineRunner _coroutineRunner;
+        private bool _zoneDestroyed;
 
-        private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
+        private readonly IMaterialService _materialService;
 
 
-        public ColorZone(Vector3 center, Color color, Transform nonRotationalParent, Material material, ICoroutineRunner coroutineRunner)
+        public ColorZone(Vector3 center, Color color, Transform nonRotationalParent,
+            ICoroutineRunner coroutineRunner, IMaterialService materialService)
         {
-            this.center = center;
-            this.color = color;
-
+            Center = center;
+            Color = color;
+            _materialService = materialService;
             _coroutineRunner = coroutineRunner;
             _nonRotationalParent = nonRotationalParent;
-            _material = material;
         }
 
         public void RegisterBall(IDestroyableNotifier ball) => _ballsInZone.Add(ball);
 
         public void DestroyAllBallsInZone()
         {
-           _coroutineRunner.StartCoroutine(DestroyAllBallsInZoneRoutine());
+            if (!_zoneDestroyed)
+            {
+                _zoneDestroyed = true;
+                
+                _coroutineRunner.StartCoroutine(DestroyAllBallsInZoneRoutine());
+                _materialService.DeleteMaterial(Color);
+            }
+            
         }
 
         private IEnumerator DestroyAllBallsInZoneRoutine()
@@ -44,17 +51,10 @@ namespace CodeBase.Zone
             foreach (IDestroyableNotifier ball in _ballsInZone)
             {
                 ball.ZoneDestroy();
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.003f);
             }
         }
-        
 
         public Transform GetNonRotationalParent() => _nonRotationalParent;
-
-        public Material GetMaterial()
-        {
-            _material.SetColor(BaseColor, color);
-            return _material;
-        }
     }
 }

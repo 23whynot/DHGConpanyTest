@@ -15,10 +15,5 @@ namespace CodeBase.Balls.Sphere
         {
             _renderer.material = material;
         }
-
-        public void SetColor(Color color)
-        {
-            _renderer.material.color = color;
-        }
     }
 }

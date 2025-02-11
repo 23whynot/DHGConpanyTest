@@ -5,6 +5,5 @@ namespace CodeBase.Balls.Player
     public interface IPlayerBall
     {
         public Color GetColor();
-        public void Destroy();
     }
 }

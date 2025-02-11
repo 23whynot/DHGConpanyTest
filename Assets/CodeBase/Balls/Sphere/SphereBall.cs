@@ -1,5 +1,9 @@
+using CodeBase.Balls.Player;
+using CodeBase.Services.RendererMaterialService;
 using CodeBase.Zone;
 using UnityEngine;
+using Zenject;
+
 
 namespace CodeBase.Balls.Sphere
 {
@@ -8,23 +12,20 @@ namespace CodeBase.Balls.Sphere
         [SerializeField] private Rigidbody rb;
         [SerializeField] private ParticleSystem effect;
         [SerializeField] private Renderer meshRenderer;
-        [SerializeField] private CollisionHandler collisionHandler;
+
 
         private IDestroyColorZone _zone;
-        private MaterialController _materialController;
+        private IMaterialService _sphereBallMaterialProvider;
 
-        private void Awake() => _materialController = new MaterialController(meshRenderer);
+        [Inject]
+        public void Construct(IMaterialService sphereBallMaterialProvider) => _sphereBallMaterialProvider = sphereBallMaterialProvider;
 
-        public void Init(IDestroyColorZone zone, Material material)
+
+        public void Init(IDestroyColorZone zone)
         {
             _zone = zone;
-            
-            collisionHandler.Initialize(zone);
-            
-            _materialController.SetMaterial(material);
+            meshRenderer.material = _sphereBallMaterialProvider.GetMaterial(zone.Color);
         }
-
-        public void DeactivateBall() => gameObject.SetActive(false);
 
         public void ZoneDestroy()
         {
@@ -35,8 +36,17 @@ namespace CodeBase.Balls.Sphere
 
         private void OnCollisionEnter(Collision other)
         {
-            collisionHandler.HandleCollision(other, this);
+            if (other.gameObject.TryGetComponent<IPlayerBall>(out IPlayerBall playerBall))
+            {
+                if (playerBall.GetColor() == _zone.Color) _zone.DestroyAllBallsInZone();
+            }
+            else
+            {
+                DeactivateBall();
+            }
         }
+
+        private void DeactivateBall() => gameObject.SetActive(false);
 
         private void ChangeParentTransform(Transform parent) => transform.SetParent(parent);
     }

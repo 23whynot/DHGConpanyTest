@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace CodeBase.Services
+namespace CodeBase.Services.Input
 {
     public class EditorInputService : InputService
     {
@@ -9,7 +7,7 @@ namespace CodeBase.Services
 
         public override bool IsHolding()
         {
-            bool isHoldingNow = Input.GetMouseButton(0);
+            bool isHoldingNow = UnityEngine.Input.GetMouseButton(0);
 
             // Вызываем событие, если кнопка отпущена
             if (_wasHolding && !isHoldingNow)
@@ -23,12 +21,12 @@ namespace CodeBase.Services
 
         public override float GetHorizontal()
         {
-            return Input.GetAxis("Mouse X") * MouseSensitivity;
+            return UnityEngine.Input.GetAxis("Mouse X") * MouseSensitivity;
         }
 
         public override float GetVertical()
         {
-            return Input.GetAxis("Mouse Y") * MouseSensitivity;
+            return UnityEngine.Input.GetAxis("Mouse Y") * MouseSensitivity;
         }
     }
 }

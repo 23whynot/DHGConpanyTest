@@ -6,6 +6,6 @@ namespace CodeBase.Zone
     {
         public void DestroyAllBallsInZone();
         public Transform GetNonRotationalParent();
-        public Color color { get; }
+        public Color Color { get; }
     }
 }

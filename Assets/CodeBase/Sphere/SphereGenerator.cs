@@ -1,8 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeBase.Balls.Sphere;
 using CodeBase.Zone;
 using System.Linq;
+using CodeBase.Services.RendererMaterialService;
+using Zenject;
+using Random = UnityEngine.Random;
 
 namespace CodeBase.Sphere
 {
@@ -11,15 +15,27 @@ namespace CodeBase.Sphere
         [SerializeField] private SphereBall ballPrefab;
         [SerializeField] private Transform nonRotationalParent;
         [SerializeField] private Material material;
-        
+
         [Range(1, 3)] public int layerCount = 3;
         public List<Color> zoneColors = new List<Color>();
-        
+
         private const int BaseBallCount = 350;
         private const float OuterSphereRadius = 6f;
         private const float InnerSphereRadius = 3f;
         private const float NoiseScale = 3f;
         private const float BorderWidth = 0.4f;
+
+        private IMaterialService _materialService;
+        private DiContainer _diContainer;
+
+        [Inject]
+        public void Construct(IMaterialService materialService, DiContainer diContainer)
+        {
+            _materialService = materialService;
+            _diContainer = diContainer;
+        }
+
+        private void Awake() => _materialService.Init(material, layerCount);
 
         private void Start() => GenerateLayers();
 
@@ -37,7 +53,11 @@ namespace CodeBase.Sphere
             }
         }
 
-        private List<ColorZone> CreateZones() => zoneColors.Select(color => new ColorZone(Random.onUnitSphere * 2f, color, nonRotationalParent, new Material(material), this)).ToList();
+        private List<ColorZone> CreateZones()
+        {
+            return zoneColors.Select(color =>
+                    new ColorZone(Random.onUnitSphere * 2f, color, nonRotationalParent, this, _materialService)).ToList();
+        }
 
         private void GenerateSphere(float radius, int ballCount, List<ColorZone> zones)
         {
@@ -45,8 +65,10 @@ namespace CodeBase.Sphere
             {
                 ColorZone zone = GetClosestZone(position, zones);
 
-                SphereBall ballInstance = Instantiate(ballPrefab, position, Quaternion.identity, transform);
-                ballInstance.Init(zone, zone.GetMaterial());
+                SphereBall ballInstance = _diContainer.InstantiatePrefabForComponent<SphereBall>(
+                    ballPrefab, position, Quaternion.identity, transform);
+
+                ballInstance.Init(zone);
                 zone.RegisterBall(ballInstance);
             }
         }
@@ -72,8 +94,9 @@ namespace CodeBase.Sphere
 
             foreach (var zone in zones)
             {
-                float distance = Vector3.Distance(position, zone.center) +
-                                 (Mathf.PerlinNoise(position.x * NoiseScale, position.y * NoiseScale) * 2 - 1) * BorderWidth;
+                float distance = Vector3.Distance(position, zone.Center) +
+                                 (Mathf.PerlinNoise(position.x * NoiseScale, position.y * NoiseScale) * 2 - 1) *
+                                 BorderWidth;
                 if (distance < minDistance)
                 {
                     minDistance = distance;
