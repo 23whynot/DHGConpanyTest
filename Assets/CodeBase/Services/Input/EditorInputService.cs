@@ -1,3 +1,6 @@
+using UnityEngine;
+using UnityEngine.EventSystems; // Добавь этот using
+
 namespace CodeBase.Services.Input
 {
     public class EditorInputService : InputService
@@ -7,13 +10,12 @@ namespace CodeBase.Services.Input
 
         public override bool IsHolding()
         {
+            
+            if (IsPointerOverUI()) return false;
+
             bool isHoldingNow = UnityEngine.Input.GetMouseButton(0);
 
-            // Вызываем событие, если кнопка отпущена
-            if (_wasHolding && !isHoldingNow)
-            {
-                InvokeReleaseEvent();
-            }
+            if (_wasHolding && !isHoldingNow) InvokeReleaseEvent();
 
             _wasHolding = isHoldingNow;
             return isHoldingNow;
@@ -21,12 +23,19 @@ namespace CodeBase.Services.Input
 
         public override float GetHorizontal()
         {
+            if (IsPointerOverUI()) return 0f;
             return UnityEngine.Input.GetAxis("Mouse X") * MouseSensitivity;
         }
 
         public override float GetVertical()
         {
+            if (IsPointerOverUI()) return 0f;
             return UnityEngine.Input.GetAxis("Mouse Y") * MouseSensitivity;
+        }
+
+        private bool IsPointerOverUI()
+        {
+            return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
         }
     }
 }

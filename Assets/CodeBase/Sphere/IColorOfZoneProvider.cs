@@ -5,6 +5,11 @@ namespace CodeBase.Sphere
 {
     public interface IColorOfZoneProvider
     {
-        public List<Color> GetColorOfZone();
+        public List<Color> GetColorsOfZone();
+
+        public int GetCountZone();
+        public int GetCountActiveZone();
+        
+        
     }
 }

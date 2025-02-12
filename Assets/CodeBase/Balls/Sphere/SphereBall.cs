@@ -14,14 +14,14 @@ namespace CodeBase.Balls.Sphere
         [SerializeField] private Renderer meshRenderer;
 
 
-        private IDestroyColorZone _zone;
+        private IColorZone _zone;
         private IMaterialService _sphereBallMaterialProvider;
 
         [Inject]
         public void Construct(IMaterialService sphereBallMaterialProvider) => _sphereBallMaterialProvider = sphereBallMaterialProvider;
 
 
-        public void Init(IDestroyColorZone zone)
+        public void Init(IColorZone zone)
         {
             _zone = zone;
             meshRenderer.material = _sphereBallMaterialProvider.GetMaterial(zone.Color);

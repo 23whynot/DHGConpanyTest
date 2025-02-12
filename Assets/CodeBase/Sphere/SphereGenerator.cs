@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
-using CodeBase.Balls.Sphere;
-using CodeBase.Zone;
 using System.Linq;
+using CodeBase.Balls.Sphere;
 using CodeBase.Services.RendererMaterialService;
+using CodeBase.Zone;
+using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
@@ -12,6 +12,8 @@ namespace CodeBase.Sphere
 {
     public class SphereGenerator : MonoBehaviour, IColorOfZoneProvider, ICoroutineRunner
     {
+        public event Action OnAllZonesDestroyed; // 💡 Событие, которое вызовется, когда все зоны уничтожены
+
         [SerializeField] private SphereBall ballPrefab;
         [SerializeField] private Transform nonRotationalParent;
         [SerializeField] private Material material;
@@ -27,6 +29,7 @@ namespace CodeBase.Sphere
 
         private IMaterialService _materialService;
         private DiContainer _diContainer;
+        private List<ColorZone> _activeZones = new List<ColorZone>(); // 💡 Храним активные зоны
 
         [Inject]
         public void Construct(IMaterialService materialService, DiContainer diContainer)
@@ -39,7 +42,9 @@ namespace CodeBase.Sphere
 
         private void Start() => GenerateLayers();
 
-        public List<Color> GetColorOfZone() => zoneColors;
+        public List<Color> GetColorsOfZone() => zoneColors;
+        public int GetCountZone() => zoneColors.Count * layerCount;
+        public int GetCountActiveZone() => _activeZones.Count; 
 
         private void GenerateLayers()
         {
@@ -55,8 +60,16 @@ namespace CodeBase.Sphere
 
         private List<ColorZone> CreateZones()
         {
-            return zoneColors.Select(color =>
-                    new ColorZone(Random.onUnitSphere * 2f, color, nonRotationalParent, this, _materialService)).ToList();
+            var zones = zoneColors.Select(color =>
+                new ColorZone(Random.onUnitSphere * 2f, color, nonRotationalParent, this, _materialService)).ToList();
+        
+            _activeZones.AddRange(zones); 
+            foreach (var zone in zones)
+            {
+                zone.OnZoneDestroyed += ZoneDestroyed; 
+            }
+        
+            return zones;
         }
 
         private void GenerateSphere(float radius, int ballCount, List<ColorZone> zones)
@@ -105,6 +118,15 @@ namespace CodeBase.Sphere
             }
 
             return closestZone;
+        }
+
+        private void ZoneDestroyed(ColorZone zone)
+        {
+            _activeZones.Remove(zone); 
+            if (_activeZones.Count == 0)
+            {
+                OnAllZonesDestroyed?.Invoke(); 
+            }
         }
     }
 }

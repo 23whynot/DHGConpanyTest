@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CodeBase.Balls.Sphere;
+using CodeBase.Controllers.Renderer;
 using CodeBase.Core.ObjPool;
 using CodeBase.Services.RendererMaterialService;
 using UnityEngine;
@@ -15,24 +16,31 @@ namespace CodeBase.Balls.Player
         private Color _ballColor;
         private List<Color> _colors;
         private IMaterialService _playerBallMaterialProvider;
-
+        private IHudInputProvider _hudInputProvider;
 
         public bool IsActive { get; private set; }
-        
-        [Inject]
-        public void Construct(IMaterialService playerBallMaterialProvider) => _playerBallMaterialProvider = playerBallMaterialProvider;
 
-        private void OnCollisionEnter(Collision other)
+        [Inject]
+        public void Construct(IMaterialService playerBallMaterialProvider, IHudInputProvider hudInputProvider)
         {
-            if (!other.gameObject.TryGetComponent<SphereBall>(out SphereBall ball)) Deactivate();
+            _playerBallMaterialProvider = playerBallMaterialProvider;
+            _hudInputProvider = hudInputProvider;
         }
+
+        private void Start() => _hudInputProvider.OnButtonClick += ChangeColor;
+        
+        private void OnDestroy() => _hudInputProvider.OnButtonClick -= ChangeColor;
+
+        public Color GetColor() => meshRenderer.material.GetColor("_BaseColor"); //TODO
+
+        public void ChangeColor() => meshRenderer.material = _playerBallMaterialProvider.GetActualMaterial();
 
         public void Activate()
         {
             IsActive = true;
             gameObject.SetActive(true);
             rigidBody.isKinematic = true;
-            meshRenderer.material = _playerBallMaterialProvider.GetActualMaterial();
+            ChangeColor();
         }
 
         public void Deactivate()
@@ -41,7 +49,17 @@ namespace CodeBase.Balls.Player
             gameObject.SetActive(false);
             rigidBody.isKinematic = false;
         }
-        
-        public Color GetColor() => meshRenderer.material.GetColor("_BaseColor"); //TODO
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.TryGetComponent<SphereBall>(out SphereBall ball))
+            {
+                
+            }
+            else
+            {
+                Deactivate();
+            }
+        }
     }
 }

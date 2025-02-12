@@ -5,34 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d951f1a3-b954-403d-8809-b2534704a1c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/MobileInputService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/MaterialService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/MaterialService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProviderPath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProviderPath.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/BallCountController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/BallCountController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IBallCountController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IBallCountController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/LevelEndController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/LevelEndController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer/HudInputProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer/HudInputProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer/IChangeColorButtonListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer/IChangeColorButtonListener.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer/IHudInputProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/Renderer/IHudInputProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/IMaterialService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/IMaterialService.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IPlayerBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IPlayerBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/PLayerBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/PLayerBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/CollisionHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/CollisionHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/MaterialController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/MaterialController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/MaterialController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/MaterialController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/SphereBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/SphereBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Controllers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/EditorInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/EditorInputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/EditorInputService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/EditorInputService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/IInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/IInputService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/InputService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/MobileInputService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/MobileInputService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/MobileInputService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Factory/AssetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetPath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Factory/AssetPath.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetPath.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/GameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/EditorInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/EditorInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/MobileInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/MobileInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/MaterialService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/MaterialService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/IColorOfZoneProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/IColorOfZoneProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereRotator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/ColorZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/ColorZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/IDestroyColorZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/IDestroyColorZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/SphereBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/SphereBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/IDestroyColorZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/IColorZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/IDestroyColorZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/IColorZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/LineMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/LineMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerBall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerBall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/SphereBall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/SphereBall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +73,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/bf/86ccae3d/RuntimeMethodInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Sphere/IColorOfZoneProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereRotator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/Hud/Text/HudTextController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/UIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Visual/BackGroundController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/InputService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -72,7 +94,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.12471132",
+    "XThreadsFramesViewSplitterKey": "0.23831776",
     "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -109,10 +131,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19368">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="4696">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19368" />
+      <option name="pid" value="4696" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -137,6 +159,7 @@
       <workItem from="1739261266463" duration="12041000" />
       <workItem from="1739274669316" duration="13061000" />
       <workItem from="1739300447367" duration="13529000" />
+      <workItem from="1739349374196" duration="12681000" />
     </task>
     <servers />
   </component>

@@ -12,6 +12,7 @@ namespace CodeBase.Factory
         private ObjectPool _objectPool;
         private IAssetsProvider _assetsProvider;
         private readonly int _preLoadCount = 5;
+        private IGameFactory _gameFactoryImplementation;
 
         public event Action PlayerBallGameObjectCreated;
 
@@ -45,6 +46,6 @@ namespace CodeBase.Factory
         private void InitAssetsProvider() => _assetsProvider.Init();
 
         private void RegisterInPool() =>
-            _objectPool.RegisterPrefab<PlayerBall>(_assetsProvider.GetPrefab("Ball"), _preLoadCount);
+            _objectPool.RegisterPrefab<PlayerBall>(_assetsProvider.GetPrefab(AssetsProviderPath.Ball), _preLoadCount);
     }
 }

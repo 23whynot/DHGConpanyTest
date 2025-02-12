@@ -11,7 +11,7 @@ namespace CodeBase.Services.RendererMaterialService
         private readonly List<Material> _materials = new List<Material>();
         private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
 
-        private IColorOfZoneProvider _colorOfZoneProvider;
+                  private IColorOfZoneProvider _colorOfZoneProvider;
 
         [Inject]
         public void Construct(IColorOfZoneProvider colorOfZoneProvider) => _colorOfZoneProvider = colorOfZoneProvider;
@@ -19,7 +19,6 @@ namespace CodeBase.Services.RendererMaterialService
         public void Init(Material material, int layersCount)
         {
             CreateMaterialsFromColors(material, layersCount);
-            Debug.Log($"[MaterialService] Materials initialized. Count: {_materials.Count}");
         }
 
         public Material GetMaterial(Color color)
@@ -35,12 +34,11 @@ namespace CodeBase.Services.RendererMaterialService
             Material materialToRemove = _materials.Find(material =>
                 material.HasProperty(BaseColor) && material.GetColor(BaseColor) == color);
                 _materials.Remove(materialToRemove);
-            Debug.Log($"[MaterialService] Material deleted. Color: {color}" +"_material.Count" + _materials.Count);
         }
 
         private void CreateMaterialsFromColors(Material material, int layersCount)
         {
-            List<Color> colors = _colorOfZoneProvider.GetColorOfZone();
+            List<Color> colors = _colorOfZoneProvider.GetColorsOfZone();
 
             foreach (Color color in colors)
             {
@@ -52,18 +50,10 @@ namespace CodeBase.Services.RendererMaterialService
         {
             for (int i = 0; i < layersCount; i++)
             {
-                Material newMaterial = new Material(material); // Создаём уникальный экземпляр
+                Material newMaterial = new Material(material);
                 newMaterial.SetColor(BaseColor, color);
                 _materials.Add(newMaterial);
             }
         }
-    }
-
-    public interface IMaterialService
-    {
-        void Init(Material material, int layersCount);
-        Material GetMaterial(Color color);
-        Material GetActualMaterial();
-        void DeleteMaterial(Color color);
     }
 }

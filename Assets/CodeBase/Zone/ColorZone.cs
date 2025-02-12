@@ -1,20 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CodeBase.Balls.Sphere;
 using CodeBase.Services.RendererMaterialService;
 using UnityEngine;
-using Zenject;
+
 
 namespace CodeBase.Zone
 {
-    public class ColorZone : IDestroyColorZone
+    public class ColorZone : IColorZone
     {
         public Vector3 Center;
+
+        public event Action<ColorZone> OnZoneDestroyed; 
 
         public Color Color { get; private set; }
 
         private List<IDestroyableNotifier> _ballsInZone = new List<IDestroyableNotifier>();
-        private IDestroyColorZone _destroyColorZoneImplementation;
+        private IColorZone _colorZoneImplementation;
         private readonly Transform _nonRotationalParent;
         private ICoroutineRunner _coroutineRunner;
         private bool _zoneDestroyed;
@@ -33,6 +36,7 @@ namespace CodeBase.Zone
         }
 
         public void RegisterBall(IDestroyableNotifier ball) => _ballsInZone.Add(ball);
+        
 
         public void DestroyAllBallsInZone()
         {
@@ -53,6 +57,7 @@ namespace CodeBase.Zone
                 ball.ZoneDestroy();
                 yield return new WaitForSeconds(0.003f);
             }
+            OnZoneDestroyed?.Invoke(this);
         }
 
         public Transform GetNonRotationalParent() => _nonRotationalParent;

@@ -1,3 +1,4 @@
+using CodeBase.Balls.Player;
 using CodeBase.Factory;
 using CodeBase.Services;
 using CodeBase.Services.Input;
@@ -11,6 +12,7 @@ namespace CodeBase
         [Header("Ball Configuration")]
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private float initialSpeed = 50f;
+        [SerializeField] private int bonusBallCount = 2;
         
         [Header("Trajectory Settings")]
         [SerializeField] private ProjectileTrajectory projectileTrajectory;
@@ -24,15 +26,21 @@ namespace CodeBase
 
         private IGameFactory _gameFactory;
         private IInputService _inputService;
+        private IBallCountController _ballCountController;
 
         [Inject]
-        public void Construct(IGameFactory gameFactory, IInputService inputService)
+        public void Construct(IGameFactory gameFactory, IInputService inputService, IBallCountController ballCountController)
         {
+            _ballCountController = ballCountController;
             _gameFactory = gameFactory;
             _inputService = inputService;
         }
 
-        private void Awake() => _gameFactory.Init();
+        private void Awake()
+        {
+            _ballCountController.InitBallCount(bonusBallCount);
+            _gameFactory.Init();
+        }
 
         private void Start()
         {
@@ -65,6 +73,7 @@ namespace CodeBase
 
         private void LaunchBall()
         {
+            _ballCountController.OnShoot();
             
             Rigidbody rb = _currentBall.GetComponent<Rigidbody>();
             rb.isKinematic = false;
