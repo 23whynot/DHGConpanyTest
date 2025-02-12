@@ -5,15 +5,305 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d951f1a3-b954-403d-8809-b2534704a1c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/ILevelEndController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/ILevelEndController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IBallCountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IBallCountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/LevelEndController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/LevelEndController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/TrajectoryCalculator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/TrajectoryCalculator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Zone/ColorZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Zone/ColorZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/HUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/HUD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/LooseScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/LooseScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/WinScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/WinScreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/DarkSkybox.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/DarkSkybox.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/UnlitBlack.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/UnlitBlack.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexLitDiffuseCircle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexLitDiffuseCircle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexLitDiffuseNoMask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexLitDiffuseNoMask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexLitDiffuseRoundedSquare.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexLitDiffuseRoundedSquare.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitDiffuseCircle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitDiffuseCircle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitDiffuseNoMask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitDiffuseNoMask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitDiffuseNoMaskAdditive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitDiffuseNoMaskAdditive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowCircle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowCircle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowCircleAdditive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowCircleAdditive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowFadeMask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowFadeMask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowHollowCircle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowHollowCircle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowHollowCircleAdditive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowHollowCircleAdditive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowNoMask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowNoMask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowNoMaskAdditive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowNoMaskAdditive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowRoundedSquare.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitGlowRoundedSquare.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitSlightGlowFadedMaskAdditive.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Materials/VertexUnlitSlightGlowFadedMaskAdditive.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh/Triangle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh/Triangle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh/WireIco.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh/WireIco.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh/icoBig.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Mesh/icoBig.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Confetti Rain.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Confetti Rain.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Etherial Lines.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Etherial Lines.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/FireFlies.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/FireFlies.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Ground Embers.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Ground Embers.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Rain (Basic).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Rain (Basic).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Rain (Collision).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Rain (Collision).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Wind.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Atmosphere/Wind.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Arcade Spark.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Arcade Spark.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark 4 (Shower).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark 4 (Shower).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BasicSpark.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BirthdayConfetti + Streamers.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BirthdayConfetti + Streamers.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BirthdayConfetti.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BirthdayConfetti.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BirthdaySpark.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/BirthdaySpark.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ChargingPop.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ChargingPop.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/CosmicReversal.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/CosmicReversal.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/EtherealHit 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/EtherealHit 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/EtherealHit.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/EtherealHit.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Fireworks.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Fireworks.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Hollywood Spark Shower.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Hollywood Spark Shower.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Instability (loop).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Instability (loop).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/MuzzleFlash TRIS.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/MuzzleFlash TRIS.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/MuzzleFlash.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/MuzzleFlash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ScifiTris 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ScifiTris 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ScifiTris 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ScifiTris 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ScifiTris 3 (collapse).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/ScifiTris 3 (collapse).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/SmokeyExplosion 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/SmokeyExplosion 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/SmokeyExplosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/SmokeyExplosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Tris Spark 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Tris Spark 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Tris Spark.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Normal/Tris Spark.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/EtherialStreaksTrail.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/EtherialStreaksTrail.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/EtherialTrail.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/EtherialTrail.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/SmokeTrail 3d.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/SmokeTrail 3d.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/SmokeTrail.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Particles/Trails/SmokeTrail.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Scenes/DemoScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Scenes/DemoScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Settings/PostProcessProfile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Settings/PostProcessProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/MediumCircleMask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/MediumCircleMask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/RoundedSquareMask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/RoundedSquareMask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/White Circle Mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/White Circle Mask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/WhiteToNothing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sherbbs Particle Collection/Textures/WhiteToNothing.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Demo/Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Demo/Scene/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Demo/Scene/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/LitTest.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/LitTest.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Sphere3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Material/Torus 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts/AbstractTargetFollower.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts/AbstractTargetFollower.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts/FreeLookCam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts/FreeLookCam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts/PivotBasedCameraRig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Cameras/Scripts/PivotBasedCameraRig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 0.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 0.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Face/Face.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Hat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Hat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1/Slime1_King.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1/Slime1_King.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1/Slime1_Viking.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1/Slime1_Viking.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1/Slime1_White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 1/Slime1_White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 2/Slime2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 2/Slime2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3 4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Materials/Slime 3/Slime3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes/Slime_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes/Slime_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes/Slime_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes/Slime_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes/Slime_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Slimes/Slime_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/Crown.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/Crown.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/Leaf.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/Leaf.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/MetalHelmet.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/MetalHelmet.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/Sprout.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/Sprout.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/VikingHelmet.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Models/Top/VikingHelmet.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01_King.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01_King.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01_MeltalHelmet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01_MeltalHelmet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01_Viking.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_01_Viking.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03 King.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03 King.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03 Leaf.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03 Leaf.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03 Sprout.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03 Sprout.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Prefabs/Slime_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_00.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_00.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_01.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_01.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_02.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_02.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_03.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Face/Face_03.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/ProtectiveHat.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/ProtectiveHat.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Slime_02.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Slime_02.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Slime_03.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Kawaii Slimes/Textures/Slime_03.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Monkey.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Monkey/Mounkey.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Monkey/Mounkey.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Torus 1.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Model/Torus 1.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Process Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Process Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Scripts/SelfRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Scripts/SelfRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Shader/ToonLightBase.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Shader/ToonLightBase.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Day_BlueSky_Nothing Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Day_BlueSky_Nothing Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleToon/Skybox/Sky_Day_BlueSky_Nothing_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/GUI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GUI.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +329,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/UIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Visual/BackGroundController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/InputService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -126,6 +417,8 @@
       <workItem from="1739370740881" duration="596000" />
       <workItem from="1739371507636" duration="2605000" />
       <workItem from="1739374272591" duration="583000" />
+      <workItem from="1739375084115" duration="3655000" />
+      <workItem from="1739379508020" duration="303000" />
     </task>
     <servers />
   </component>

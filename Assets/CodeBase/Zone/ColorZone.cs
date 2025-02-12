@@ -21,6 +21,7 @@ namespace CodeBase.Zone
         private readonly Transform _nonRotationalParent;
         private ICoroutineRunner _coroutineRunner;
         private bool _zoneDestroyed;
+        private const float CascadeTime = 0.0005f;
 
         private readonly IMaterialService _materialService;
 
@@ -55,7 +56,7 @@ namespace CodeBase.Zone
             foreach (IDestroyableNotifier ball in _ballsInZone)
             {
                 ball.ZoneDestroy();
-                yield return new WaitForSeconds(0.003f);
+                yield return new WaitForSeconds(CascadeTime);
             }
             OnZoneDestroyed?.Invoke(this);
         }
