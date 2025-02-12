@@ -29,7 +29,7 @@ namespace CodeBase.UI
         public void ShowWinScreen()
         {
             hud.SetActive(false);
-            loseScreen.SetActive(true);
+            loseScreen.SetActive(false);
             
             winScreen.SetActive(true);
             

@@ -7,7 +7,7 @@ namespace CodeBase.UI.Hud.Input
 {
     public class HudInputController : MonoBehaviour
     {
-        [Header("Hud button")] 
+        [Header("Hud кнопки")] 
         [SerializeField] private Button _changeColorButton;
 
         private IChangeColorButtonListener _changeColorButtonListener;

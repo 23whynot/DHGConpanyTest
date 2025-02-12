@@ -1,5 +1,5 @@
 using System;
-using CodeBase.AssetsManagment;
+using CodeBase.AssetsManagement;
 using CodeBase.Balls.Player;
 using CodeBase.Core.ObjPool;
 using UnityEngine;
@@ -9,12 +9,10 @@ namespace CodeBase.Factory
 {
     public class GameFactory : IGameFactory
     {
+        private readonly int _preLoadCount = 5;
+
         private ObjectPool _objectPool;
         private IAssetsProvider _assetsProvider;
-        private readonly int _preLoadCount = 5;
-        private IGameFactory _gameFactoryImplementation;
-
-        public event Action PlayerBallGameObjectCreated;
 
         [Inject]
         public void Construct(ObjectPool objectPool, IAssetsProvider assetsProvider)
@@ -32,7 +30,6 @@ namespace CodeBase.Factory
         public GameObject CreatePlayerBall(Transform at)
         {
             GameObject obj = GetFromPool(AssetPath.PlayerBall, at.position);
-            PlayerBallGameObjectCreated?.Invoke();
             return obj;
         }
 
@@ -40,6 +37,7 @@ namespace CodeBase.Factory
         {
             PlayerBall obj = _objectPool.GetObject<PlayerBall>();
             obj.transform.position = atPosition;
+            obj.Activate();
             return obj.gameObject;
         }
 

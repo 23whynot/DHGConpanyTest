@@ -1,7 +1,6 @@
-using CodeBase.Factory;
 using UnityEngine;
 
-namespace CodeBase.AssetsManagment
+namespace CodeBase.AssetsManagement
 {
     public class AssetsProvider : IAssetsProvider
     {

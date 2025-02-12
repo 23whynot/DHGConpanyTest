@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CodeBase.Balls.Sphere;
+using CodeBase.Constants;
 using CodeBase.Controllers.Renderer;
 using CodeBase.Core.ObjPool;
 using CodeBase.Services.RendererMaterialService;
@@ -12,7 +13,7 @@ namespace CodeBase.Balls.Player
     {
         [SerializeField] private Renderer meshRenderer;
         [SerializeField] private Rigidbody rigidBody;
-        
+
         private Color _ballColor;
         private List<Color> _colors;
         private IMaterialService _playerBallMaterialProvider;
@@ -28,12 +29,10 @@ namespace CodeBase.Balls.Player
         }
 
         private void Start() => _hudInputProvider.OnButtonClick += ChangeColor;
-        
+
         private void OnDestroy() => _hudInputProvider.OnButtonClick -= ChangeColor;
 
-        public Color GetColor() => meshRenderer.material.GetColor("_BaseColor"); //TODO
-
-        public void ChangeColor() => meshRenderer.material = _playerBallMaterialProvider.GetActualMaterial();
+        public Color GetColor() => meshRenderer.material.GetColor(ColorConstants.BaseColorOnMaterial);
 
         public void Activate()
         {
@@ -50,16 +49,12 @@ namespace CodeBase.Balls.Player
             rigidBody.isKinematic = false;
         }
 
+        private void ChangeColor() => meshRenderer.material = _playerBallMaterialProvider.GetActualMaterial();
+
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.TryGetComponent<SphereBall>(out SphereBall ball))
-            {
-                
-            }
-            else
-            {
+            if (!other.gameObject.TryGetComponent<SphereBall>(out SphereBall ball))
                 Deactivate();
-            }
         }
     }
 }

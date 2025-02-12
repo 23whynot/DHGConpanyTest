@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CodeBase.Constants;
 using CodeBase.Sphere;
 using UnityEngine;
 using Zenject;
@@ -9,7 +10,6 @@ namespace CodeBase.Services.RendererMaterialService
     public class MaterialService : IMaterialService
     {
         private readonly List<Material> _materials = new List<Material>();
-        private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
 
                   private IColorOfZoneProvider _colorOfZoneProvider;
 
@@ -24,7 +24,7 @@ namespace CodeBase.Services.RendererMaterialService
         public Material GetMaterial(Color color)
         {
             return _materials.Find(material =>
-                material.HasProperty(BaseColor) && material.GetColor(BaseColor) == color);
+                material.HasProperty(ColorConstants.BaseColorOnMaterial) && material.GetColor(ColorConstants.BaseColorOnMaterial) == color);
         }
 
         public Material GetActualMaterial() => _materials[Random.Range(0, _materials.Count)];
@@ -32,7 +32,7 @@ namespace CodeBase.Services.RendererMaterialService
         public void DeleteMaterial(Color color)
         {
             Material materialToRemove = _materials.Find(material =>
-                material.HasProperty(BaseColor) && material.GetColor(BaseColor) == color);
+                material.HasProperty(ColorConstants.BaseColorOnMaterial) && material.GetColor(ColorConstants.BaseColorOnMaterial) == color);
                 _materials.Remove(materialToRemove);
         }
 
@@ -51,7 +51,7 @@ namespace CodeBase.Services.RendererMaterialService
             for (int i = 0; i < layersCount; i++)
             {
                 Material newMaterial = new Material(material);
-                newMaterial.SetColor(BaseColor, color);
+                newMaterial.SetColor(ColorConstants.BaseColorOnMaterial, color);
                 _materials.Add(newMaterial);
             }
         }

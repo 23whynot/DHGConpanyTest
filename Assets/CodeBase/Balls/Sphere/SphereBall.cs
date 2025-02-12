@@ -12,8 +12,7 @@ namespace CodeBase.Balls.Sphere
         [SerializeField] private Rigidbody rb;
         [SerializeField] private ParticleSystem effect;
         [SerializeField] private Renderer meshRenderer;
-
-
+        
         private IColorZone _zone;
         private IMaterialService _sphereBallMaterialProvider;
 

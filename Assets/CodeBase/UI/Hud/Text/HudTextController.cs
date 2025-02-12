@@ -10,6 +10,7 @@ namespace CodeBase.UI.Hud.Text
         [SerializeField] private TextMeshProUGUI ballsLeftText;
         
         private const string BallLeftText = "Balls Left:";
+        
         private IBallCountController _ballCountController;
         
         private int _count;

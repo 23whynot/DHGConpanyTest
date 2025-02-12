@@ -12,14 +12,13 @@ namespace CodeBase.Sphere
 {
     public class SphereGenerator : MonoBehaviour, IColorOfZoneProvider, ICoroutineRunner
     {
-        public event Action OnAllZonesDestroyed; // 💡 Событие, которое вызовется, когда все зоны уничтожены
-
         [SerializeField] private SphereBall ballPrefab;
         [SerializeField] private Transform nonRotationalParent;
         [SerializeField] private Material material;
-
-        [Range(1, 3)] public int layerCount = 3;
-        public List<Color> zoneColors = new List<Color>();
+        [Range(1, 3)]
+        [SerializeField] private int layerCount = 3;
+        [SerializeField]private List<Color> zoneColors = new List<Color>();
+        public event Action OnAllZonesDestroyed;
 
         private const int BaseBallCount = 350;
         private const float OuterSphereRadius = 6f;
@@ -29,7 +28,7 @@ namespace CodeBase.Sphere
 
         private IMaterialService _materialService;
         private DiContainer _diContainer;
-        private List<ColorZone> _activeZones = new List<ColorZone>(); // 💡 Храним активные зоны
+        private List<ColorZone> _activeZones = new List<ColorZone>();
 
         [Inject]
         public void Construct(IMaterialService materialService, DiContainer diContainer)
