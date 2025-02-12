@@ -6,9 +6,7 @@ namespace CodeBase.Balls.Player
     {
         event Action<int> OnBallCountChanged;
         event Action OnBallsEnd;
-
         void OnShoot();
-        
         void InitBallCount(int bonusBallCount);
         int GetBallCount();
     }

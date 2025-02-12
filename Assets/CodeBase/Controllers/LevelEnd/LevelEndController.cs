@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using CodeBase.Balls.Player;
 using CodeBase.Sphere;
@@ -7,12 +8,14 @@ using Zenject;
 
 namespace CodeBase.Controllers.LevelEnd
 {
-    public class LevelEndController : MonoBehaviour
+    public class LevelEndController : MonoBehaviour, ILevelEndController
     {
         [SerializeField] private UIController uiController;
+        
+        private bool _levelEnded;
+
         private IBallCountController _ballCountController;
         private SphereGenerator _sphereGenerator;
-        private bool _levelEnded;
 
         [Inject]
         public void Construct(SphereGenerator sphereGenerator, IBallCountController ballCountController)
@@ -21,9 +24,11 @@ namespace CodeBase.Controllers.LevelEnd
             _ballCountController = ballCountController;
         }
 
+        public event Action OnLevelEnded;
+
         private void Start()
         {
-            _sphereGenerator.OnAllZonesDestroyed += WinLevel; 
+            _sphereGenerator.OnAllZonesDestroyed += WinLevel;
             _ballCountController.OnBallsEnd += CheckLoseCondition;
         }
 
@@ -31,6 +36,7 @@ namespace CodeBase.Controllers.LevelEnd
         {
             if (_levelEnded) return;
             _levelEnded = true;
+            OnLevelEnded?.Invoke();
             uiController.ShowWinScreen();
         }
 
@@ -46,6 +52,7 @@ namespace CodeBase.Controllers.LevelEnd
             if (!_levelEnded && _sphereGenerator.GetCountActiveZone() > 0)
             {
                 _levelEnded = true;
+                OnLevelEnded?.Invoke();
                 uiController.ShowLoseScreen();
             }
         }

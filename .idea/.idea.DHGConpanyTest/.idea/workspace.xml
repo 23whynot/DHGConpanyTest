@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d951f1a3-b954-403d-8809-b2534704a1c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Constants.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Constants/ColorConstants.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Constants/ColorConstants.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/ILevelEndController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/ILevelEndController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DHGConpanyTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/AssetPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetPath.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/AssetPath.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/AssetsProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/AssetsProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProviderPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/AssetsProviderPath.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/AssetsProviderPath.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/AssetsProviderPath.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/IAssetsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/IAssetsProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagment/IAssetsProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/AssetsManagement/IAssetsProvider.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/PLayerBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/PLayerBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/SphereBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Sphere/SphereBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IBallCountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Balls/Player/IBallCountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/LevelEndController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Controllers/LevelEnd/LevelEndController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Core/Zenject/SceneInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/DirectionalArc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/MaterialService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Services/RendererMaterialService/MaterialService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/ProjectileTrajectory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Sphere/SphereRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Hud/Input/HudInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Hud/Input/HudInputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Hud/Text/HudTextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Hud/Text/HudTextController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/LooseScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/LooseScreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/WinScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Canvas/WinScreen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +124,8 @@
       <workItem from="1739349374196" duration="12681000" />
       <workItem from="1739367234514" duration="3438000" />
       <workItem from="1739370740881" duration="596000" />
+      <workItem from="1739371507636" duration="2605000" />
+      <workItem from="1739374272591" duration="583000" />
     </task>
     <servers />
   </component>

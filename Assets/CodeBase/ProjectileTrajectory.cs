@@ -1,3 +1,4 @@
+using CodeBase.Balls.Player;
 using CodeBase.Services;
 using CodeBase.Services.Input;
 using UnityEngine;
@@ -14,21 +15,38 @@ namespace CodeBase
         private Transform _spawnPoint;
         private float _initialSpeed;
         private Vector3[] _pointsCache;
-        
+
         private IInputService _inputService;
+        private IBallCountController _ballCountController;
+        private bool _isDrawingTrajectory = true;
 
         [Inject]
-        public void Construct(IInputService inputService) => _inputService = inputService;
+        public void Construct(IInputService inputService, IBallCountController ballCountController)
+        {
+            _ballCountController = ballCountController;
+            _inputService = inputService;
+        }
 
         private void Start()
         {
+            _ballCountController.OnBallsEnd += StopDrawTrajectory;
             _inputService.OnRelease += DisableTrajectory;
             SetTrajectoryVisibility(false);
         }
 
-        private void Update() => SetTrajectoryVisibility(_inputService.IsHolding());
+        private void Update()
+        {
+            if (_isDrawingTrajectory)
+                SetTrajectoryVisibility(_inputService.IsHolding());
+        }
+        
+        private void OnDestroy()
+        {
+            _ballCountController.OnBallsEnd -= StopDrawTrajectory;
+            _inputService.OnRelease -= DisableTrajectory;
+        }
 
-        private void OnDestroy() => _inputService.OnRelease -= DisableTrajectory;
+        private void StopDrawTrajectory() => _isDrawingTrajectory = false;
 
         public void SetupTrajectory(Transform spawn, float speed)
         {
@@ -43,9 +61,10 @@ namespace CodeBase
 
             if (IsCacheInvalid())
                 _pointsCache = new Vector3[resolution];
-            
+
             TrajectoryCalculator.FillTrajectoryPoints
-                (_spawnPoint.position, CalculateLaunchVelocity(horizontalAngleOffset, verticalAngleOffset), _pointsCache, 2f);
+            (_spawnPoint.position, CalculateLaunchVelocity(horizontalAngleOffset, verticalAngleOffset),
+                _pointsCache, 2f);
 
             UpdateLineRenderer(_pointsCache);
         }

@@ -1,4 +1,5 @@
 using CodeBase.Balls.Player;
+using CodeBase.Controllers.LevelEnd;
 using CodeBase.Factory;
 using CodeBase.Services;
 using CodeBase.Services.Input;
@@ -13,25 +14,28 @@ namespace CodeBase
         [SerializeField] private float initialSpeed = 50f;
         [SerializeField] private int bonusBallCount = 2;
 
-        [Header("Параметри траекторіі")] 
-        [SerializeField] private ProjectileTrajectory projectileTrajectory;
+        [Header("Параметри траекторіі")] [SerializeField]
+        private ProjectileTrajectory projectileTrajectory;
+
         [SerializeField] private float horizontalAdjustmentSpeed = 60f;
         [SerializeField] private float verticalAdjustmentSpeed = 30f;
 
         private GameObject _currentBall;
         private bool _firstPress = true;
-        private bool _spawnAllowed = true;
+        private bool _inputAllowed = true;
         private float _horizontalAngleOffset;
         private float _verticalAngleOffset;
 
         private IGameFactory _gameFactory;
         private IInputService _inputService;
         private IBallCountController _ballCountController;
+        private ILevelEndController _levelEndController;
 
         [Inject]
         public void Construct(IGameFactory gameFactory, IInputService inputService,
-            IBallCountController ballCountController)
+            IBallCountController ballCountController, ILevelEndController levelEndController)
         {
+            _levelEndController = levelEndController;
             _ballCountController = ballCountController;
             _gameFactory = gameFactory;
             _inputService = inputService;
@@ -48,13 +52,18 @@ namespace CodeBase
             SpawnBall();
             UpdateTrajectory();
 
-            _ballCountController.OnBallsEnd += StopSpawn;
+            _levelEndController.OnLevelEnded += StopInput;
+            _ballCountController.OnBallsEnd += StopInput;
             _inputService.OnRelease += LaunchBall;
         }
 
         private void Update()
         {
-            if (!_inputService.IsHolding()) return;
+            if (!_inputAllowed)
+                return;
+
+            if (!_inputService.IsHolding())
+                return;
 
             if (_firstPress)
             {
@@ -76,13 +85,15 @@ namespace CodeBase
 
         private void OnDestroy()
         {
-            _ballCountController.OnBallsEnd += StopSpawn;
+            _levelEndController.OnLevelEnded -= StopInput;
+            _ballCountController.OnBallsEnd -= StopInput;
             _inputService.OnRelease -= LaunchBall;
         }
 
         private void LaunchBall()
         {
-            if (!_spawnAllowed) return;
+            if (!_inputAllowed) 
+                return;
             _ballCountController.OnShoot();
 
             Rigidbody rb = _currentBall.GetComponent<Rigidbody>();
@@ -100,7 +111,7 @@ namespace CodeBase
             projectileTrajectory.DrawTrajectory(_horizontalAngleOffset, _verticalAngleOffset);
         }
 
-        private void StopSpawn() => _spawnAllowed = false;
+        private void StopInput() => _inputAllowed = false;
 
         private void SpawnBall() => _currentBall = _gameFactory.CreatePlayerBall(spawnPoint);
     }

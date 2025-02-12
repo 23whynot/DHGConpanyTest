@@ -1,5 +1,6 @@
 using CodeBase.AssetsManagement;
 using CodeBase.Balls.Player;
+using CodeBase.Controllers.LevelEnd;
 using CodeBase.Controllers.Renderer;
 using CodeBase.Core.ObjPool;
 using CodeBase.Factory;
@@ -24,6 +25,7 @@ namespace CodeBase.Core.Zenject
             Container.Bind<IColorOfZoneProvider>().FromComponentInHierarchy().AsSingle();
             Container.Bind<IInputService>().FromMethod(GetInputService).AsSingle();
             Container.Bind<SphereGenerator>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<ILevelEndController>().FromComponentInHierarchy().AsSingle();
         }
         private IInputService GetInputService(InjectContext context)
         {
